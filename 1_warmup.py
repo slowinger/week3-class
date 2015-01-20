@@ -23,15 +23,20 @@
 # ZEBRA  - should be encoded as -  cheud
 # Pizza  - should be encoded as -  slccd
 
+
 def use_secret_encoder(plain_text):
-  encoded_message = ""
-  for letter in plain_text:
-    new_letter = chr(ord(letter) + 3)
-    encoded_message += new_letter
-  return encoded_message
+    encoded_message = ""
+    for letter in plain_text:
+        new_letter = chr(ord(letter) + 3)
+        encoded_message += new_letter
+    return encoded_message
 
 def use_secret_decoder(encoded_text):
-  return cipher_text
+    cipher_text = ""
+    for letter in encoded_text:
+        new_letter = chr(ord(letter) -3)
+        cipher_text += new_letter
+    return cipher_text
 
 
 message_to_be_encoded = input("What message do you want to send? ")
